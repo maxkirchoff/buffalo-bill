@@ -64,6 +64,10 @@ def claps():
     params = json.dumps({'file': 'sounds/claps.wav','file_type': 'sfx'})
     response = api_call("POST", "/api/v1/play", params)
 
+def mouth():
+    params = json.dumps({'file': 'sfx/scary mouth open.wav','file_type': 'sfx'})
+    response = api_call("POST", "/api/v1/play", params)
+
 def stop():
     params = json.dumps({'song': 'skip'})
     response = api_call("POST", "/api/v1/control", params)
@@ -97,6 +101,10 @@ def commands():
     sendmsg("!js")
     sendmsg("!claps")
     sendmsg("!stop")
+    sendmsg("!getvol")
+    sendmsg("!setvol")
+    sendmsg("!say")
+
 
 def puppet(ircstr):
   (_, _, puppetstr) = ircstr.partition("!puppet")
