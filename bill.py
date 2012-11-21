@@ -100,6 +100,7 @@ def commands():
     sendmsg("!wtf")
     sendmsg("!js")
     sendmsg("!claps")
+    sendmsg("!mouth")
     sendmsg("!stop")
     sendmsg("!getvol")
     sendmsg("!setvol")
@@ -125,6 +126,9 @@ while 1:
 
   if ircmsg.find(":!commands") != -1:
     commands()
+
+  if ircmsg.find(":!mouth") != -1:
+    mouth()
 
   if ircmsg.find(":!sadsax") != -1:
     sadsax()
